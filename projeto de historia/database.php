@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$database = 'aula_sessao_db';
+$database = 'projeto_historia';
 
 //criar conexão
 

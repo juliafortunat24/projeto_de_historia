@@ -1,5 +1,5 @@
 <?php 
-include 'database.php';
+include 'projeto de historia/database.php';
 session_start();
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $usuario_logado = $result->fetch_assoc();
         $_SESSION['usuario_sessao'] = $usuario_logado['nome_usuario'];
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
-        header('Location: pagina_icial.php');
+        header('Location: projeto de historia/pagina_icial.php');
     } else {
     }
 }
