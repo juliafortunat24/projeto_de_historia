@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="idademedia.css">
 </head>
 <body>
 <div class="pos-f-t">
@@ -46,6 +47,14 @@
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <h1>Idade Média</h1>
-    <img src="" alt="">
+    <div class="conteudo">
+        <img id="imagemidm" src="idademedia.jpeg" alt="">
+        <div class="texto">
+            <p>A Idade Média é o período da história geral que se inicia no século V, logo após a queda do Império Romano do Ocidente, e termina no século XV, com a conquista de Constantinopla pelo Império Turco-Otomano. Foi um período marcado pela síntese da herança romana com a cultura dos povos bárbaros que invadiram o Império Romano.
+            A Igreja Católica tornou-se uma instituição poderosa e influente não apenas na religião, mas também na sociedade medieval. A invasão bárbara provocou a fuga da cidade em direção ao campo. A Europa ocidental ruralizava-se, e a riqueza era a terra. A agricultura tornou-se a principal atividade econômica, e a produção dos feudos era para o próprio sustento.
+            A partir do século XIII, por conta dos renascimentos comercial e urbano, o mundo medieval começou a entrar em crise. A centralização do poder nas mãos dos reis derrotou os senhores feudais, pacificou as revoltas servis e abriu as portas da Europa para a Idade Moderna.
+            </p>
+        </div>
+    </div>
 </body>
 </html>

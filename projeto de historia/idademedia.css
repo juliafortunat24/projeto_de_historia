@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 5%;
+}
+#imagemidm {
+    height: auto;
+    width: 30%;
+}
+.texto {
+    width: 65%;
+    background-color: rgba(128, 0, 128, 0.481);
+    padding: 10px;
+    border-radius: 10px;
+}
+p {
+    text-align: justify;
+}
