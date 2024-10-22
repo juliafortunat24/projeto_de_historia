@@ -6,15 +6,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = $_POST ['nome'];
     $senha = md5($_POST ['senha']);
 
-    $query = "SELECT * FROM usuarios WHERE nome_usuario = '$nome' AND pass ='$senha'";
-
+    $query = "SELECT * FROM usuarios WHERE nome_usuario = '$nome' AND pass_usuario ='$senha'";
     $result = mysqli_query($connection, $query);
 
     if ($result->num_rows > 0) {
         $usuario_logado = $result->fetch_assoc();
         $_SESSION['usuario_sessao'] = $usuario_logado['nome_usuario'];
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
-        header('Location: projeto de historia/pagina_icial.php');
+        header('Location: ./projeto de historia/pagina_inicial.php');
     } else {
     }
 }
