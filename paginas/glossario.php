@@ -4,14 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD:paginas/glossario.php
-    <title>Glossário de História</title>
-    <link rel="stylesheet" href="../css/glossario.css">
-=======
     <title>Document</title>
-    <link rel="stylesheet" href="./glossario.css">
+    <link rel="stylesheet" href="../css/glossario.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
->>>>>>> c3308d44f972a227510fef805d51c622568f5706:projeto de historia/glossario.php
 </head>
 
 <body>
