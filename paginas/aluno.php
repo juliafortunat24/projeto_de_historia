@@ -5,10 +5,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>DOCUMENTO</title>
       <link rel="stylesheet" href="aluno.css">
-      <link href="aluno.css" rel="stylesheet">
+      <link href="../css/aluno.css" rel="stylesheet">
       </head>
   </head>
   <body>
+    <div>
+      <img src="../img/logo2_semfundo.png" alt="">
+    </div>
     <div class="container">
       <a class="period-box idade-primitiva" href="../idadeprimitiva.php"><span>Idade Primitiva</span></a>
       <a class="period-box idade-antiga" href="../idadeantiga.php"><span>Idade Antiga</span></a>

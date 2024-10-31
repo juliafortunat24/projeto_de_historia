@@ -1,5 +1,5 @@
 <?php 
-include 'projeto de historia/database.php';
+include './bd/database.php';
 session_start();
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         $usuario_logado = $result->fetch_assoc();
         $_SESSION['usuario_sessao'] = $usuario_logado['nome_usuario'];
         $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
-        header('Location: ./projeto de historia/pagina_inicial.php');
+        header('Location: ./paginas/pagina_inicial.php');
     } else {
         echo 'ERROR';
     }
@@ -26,11 +26,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - História</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <div class="login">
-        <h1>Portal História</h1>
+        <img src="./img/logo_semfundo.png" alt="Logo do Portal História" class="logo">
+        
         <form action="" method="POST">
             <label for="nome">Nome:</label>
             <input name="nome" type="text" required>
