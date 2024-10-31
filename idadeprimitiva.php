@@ -62,7 +62,7 @@
         <!-- Seção da Imagem e Informações -->
         <section class="intro-section">
             <div class="image-container">
-                <img src="caminho/para/sua/imagem.jpg" alt="Imagem representativa da Idade Primitiva">
+                <img src="./img/img idade primitiva.jpg" alt="Imagem representativa da Idade Primitiva">
             </div>
             <div class="info-container">
                 <h2>O que é a Idade Primitiva?</h2>
@@ -120,7 +120,7 @@
         <!-- Seção da Videoaula -->
         <section class="video-section">
             <h2>Videoaula sobre a Idade Primitiva</h2>
-            <iframe src="https://www.youtube.com/embed/EXEMPLO" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=vxPRnJ-Gv6Bqb7lh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>
 </body>
