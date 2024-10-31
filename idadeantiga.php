@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="idadeantiga.css">
+    <link rel="stylesheet" href="idadeprimitiva.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -53,75 +53,78 @@
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <header>
-    <h1>A Idade Antiga</h1>
-</header>
+        <h1>A Idade Antiga</h1>
+    </header>
 
-<div class="container">
-    <!-- Seção de Introdução -->
-    <section class="intro-section">
-        <h2>O que é a Idade Antiga?</h2>
-        <p>A Idade Antiga, que vai aproximadamente de 4.000 a.C. até 476 d.C., é marcada pelo surgimento das primeiras civilizações e pelo desenvolvimento das primeiras grandes culturas organizadas. Podemos dividi-la em algumas fases e regiões importantes, com inovações e características distintas.</p>
-    </section>
+    <div class="container">
+        <!-- Seção da Imagem e Informações -->
+        <section class="intro-section">
+            <div class="image-container">
+                <img src="./img/img idade antiga.jpg" alt="Imagem representativa da Idade Primitiva">
+            </div>
+            <div class="info-container">
+                <h2>O que é a Idade Antiga?</h2>
+                <p>A Idade Antiga, que vai aproximadamente de 4.000 a.C. até 476 d.C., é marcada pelo surgimento das primeiras civilizações e pelo desenvolvimento das primeiras grandes culturas organizadas. Podemos dividi-la em algumas fases e regiões importantes, com inovações e características distintas.</p>
+                
+            </div>
+        </section>
 
-    <!-- Seção dos Períodos Principais -->
-    <section class="periods-section">
-        <h2>Principais Períodos da Idade Antiga</h2>
-        <ul>
-            <li><strong>Período Pré-Clássico (4.000 a.C. - 2.000 a.C.):</strong> Surgem as primeiras civilizações e cidades-estado, especialmente no Oriente Médio, como a Mesopotâmia e o Egito.</li>
-            <li><strong>Período Clássico (2.000 a.C. - 476 d.C.):</strong> Engloba várias civilizações em regiões como o Egito, a Grécia e Roma, com um desenvolvimento intenso na política, filosofia e ciências.</li>
-        </ul>
-    </section>
+        <!-- Cards para informações adicionais -->
+        <section class="cards-section">
+            <div class="card">
+                <h2>Períodos da Idade Antiga</h2>
+                <p>A Idade Antiga é dividida em dois períodos:</p>
+                <ul>
+                    <li><strong>Período Pré-Clássico (4.000 a.C. - 2.000 a.C.):</strong> Surgem as primeiras civilizações e 
+                    cidades-estado, especialmente no Oriente Médio, como a Mesopotâmia e o Egito.
+                    </li>
+                    <li><strong>Período Clássico (2.000 a.C. - 476 d.C.):</strong> Engloba várias civilizações em regiões como o Egito, a Grécia e Roma, com um desenvolvimento intenso na política, filosofia e ciências.
+                    </li>
+                </ul>
+                <h2>Vida Social e Cultural</h2>
+                <ul>
+                    <li><strong>Estrutura Social:</strong> Geralmente era hierárquica, com uma elite no topo (nobres, sacerdotes, reis ou imperadores) e classes mais baixas (artesãos, camponeses e escravos).</li>
+                    <li><strong>Religião:</strong> A maioria das civilizações era politeísta</li>
+                    <li><strong>Cultura e Arte:</strong> Cada civilização desenvolveu um estilo único e simbólico, refletindo suas crenças e valores.</li>
+                </ul>
+            </div>
 
-    <!-- Seção das Civilizações e Invenções -->
-    <section class="civilizations-section">
-        <h2>Principais Civilizações e Invenções</h2>
-        <ul>
-            <li><strong>Mesopotâmia (c. 4.000 a.C. - 539 a.C.):</strong>
+            <div class="card">
+                <h2>Principais Civilizações Orientais e suas Invenções</h2>
+                <p>Entre as principais civilizações orientais e suas invenções da Idade Antiga estão:</p>
                 <ul>
-                    <li><em>Invenções:</em> Escrita cuneiforme, cidade, roda e Código de Hamurabi.</li>
-                    <li><em>Conquistas:</em> Desenvolvimento agrícola, matemático e primeiros sistemas de irrigação.</li>
+                    <li><strong>Mesopotâmia:</strong> </br>Invenções: Escrita cuneiforme, o conceito de cidade, roda e primeiras leis (Código de Hamurabi).</br>
+                    Conquistas: Desenvolvimento agrícola, matemático e primeiros sistemas de irrigação.</li>
+                    <li><strong>Egito Antigo:</strong> </br> Invenções: Escrita hieroglífica, construção das pirâmides, avanços na medicina e arquitetura.</br>
+                    Conquistas: Expansão territorial, sistema avançado de irrigação e organização social.</li>
+                    <li><strong>China Antiga:</strong> </br> Invenções: Papel, pólvora, seda, compasso e primeiros sistemas de governo centralizados.</br>
+                 Conquistas: Grande Muralha, avanços na agricultura e metalurgia, pensamento filosófico (Confucionismo e Taoísmo).</li>
                 </ul>
-            </li>
-            <li><strong>Egito Antigo (c. 3.150 a.C. - 30 a.C.):</strong>
-                <ul>
-                    <li><em>Invenções:</em> Escrita hieroglífica, pirâmides, avanços em medicina e arquitetura.</li>
-                    <li><em>Conquistas:</em> Expansão territorial e organização social complexa.</li>
-                </ul>
-            </li>
-            <li><strong>China Antiga (c. 2.070 a.C. - 220 d.C.):</strong>
-                <ul>
-                    <li><em>Invenções:</em> Papel, pólvora, seda, compasso e governo centralizado.</li>
-                    <li><em>Conquistas:</em> Grande Muralha e pensamento filosófico (Confucionismo e Taoísmo).</li>
-                </ul>
-            </li>
-            <li><strong>Grécia Antiga (c. 1.200 a.C. - 146 a.C.):</strong>
-                <ul>
-                    <li><em>Invenções:</em> Democracia, teatro, filosofia, Olimpíadas e matemática.</li>
-                    <li><em>Conquistas:</em> Expansão cultural, cidades-estado como Atenas e Esparta.</li>
-                </ul>
-            </li>
-            <li><strong>Roma Antiga (c. 753 a.C. - 476 d.C.):</strong>
-                <ul>
-                    <li><em>Invenções:</em> Concreto, aquedutos, estradas, engenharia e direito romano.</li>
-                    <li><em>Conquistas:</em> Expansão do maior império da época e influências culturais duradouras.</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+            </div>
 
-    <!-- Seção da Vida Social e Cultural -->
-    <section class="social-life-section">
-        <h2>Vida Social e Cultural</h2>
-        <p><em>Estrutura Social:</em> Geralmente hierárquica, com uma elite no topo e classes mais baixas como artesãos e camponeses.</p>
-        <p><em>Religião:</em> Predominantemente politeísta, com deuses relacionados à natureza, fertilidade e guerra.</p>
-        <p><em>Educação e Filosofia:</em> Restrita às elites, mas destacada em locais como Grécia e Roma, com filósofos como Sócrates, Platão e Aristóteles.</p>
-        <p><em>Cultura e Arte:</em> Artes plásticas, escultura e arquitetura desenvolvidas e influenciadas pelas crenças de cada civilização.</p>
-    </section>
+            <div class="card">
+                <h2>Principais Civilizações Clássicas e suas Invenções</h2>
+                <p>Entre as principais civilizações clássicas e suas invenções da Idade Antiga estão:</p>
+                <ul>
+                    <li><strong>Grécia Antiga:</strong> </br>Invenções: Democracia, teatro, filosofia, Olimpíadas e estudos matemáticos.</br>
+   Conquistas: Grande influência cultural e intelectual, expansões militares e desenvolvimento de cidades-estado, como Atenas e Esparta.
+</li>
+                    <li><strong>Roma Antiga:</strong> </br>Invenções: Concreto, aquedutos, sistema de estradas, engenharia avançada e direito romano.</br>
+                    Conquistas: Expansão territorial e criação do maior império da época, influenciando a política, economia e cultura.</li>
+                  
+                </ul>
+            </div> 
+        </section> 
+        
 
-    <!-- Seção da Videoaula -->
-    <section class="video-section">
-        <h2>Videoaula sobre a Idade Antiga</h2>
-        <iframe src="https://www.youtube.com/embed/EXEMPLO" frameborder="0" allowfullscreen></iframe>
-    </section>
-</div>
+        <!-- Seção da Videoaula -->
+        <section class="video-section">
+            <h2>Videoaula sobre a Idade Primitiva</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hko3IGt-VzA?si=L52gM9Ynef8oqkhm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </div>
+</body>
+
+</html>
