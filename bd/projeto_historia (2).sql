@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 22-Out-2024 às 12:51
+-- Tempo de geração: 05-Nov-2024 às 18:39
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-USE `projeto_historia`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -21,6 +20,18 @@ USE `projeto_historia`;
 --
 -- Banco de dados: `projeto_historia`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `glossario`
+--
+
+CREATE TABLE `glossario` (
+  `id_palavra` int(11) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `descricao` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -48,6 +59,12 @@ INSERT INTO `usuarios` (`id`, `nome_usuario`, `tipo_usuario`, `pass_usuario`) VA
 --
 
 --
+-- Índices para tabela `glossario`
+--
+ALTER TABLE `glossario`
+  ADD PRIMARY KEY (`id_palavra`);
+
+--
 -- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -56,6 +73,12 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `glossario`
+--
+ALTER TABLE `glossario`
+  MODIFY `id_palavra` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
