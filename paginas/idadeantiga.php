@@ -126,8 +126,8 @@
                 </center>
                 <div class="image-gallery">
                     <div class="image-container">
-                        <img src="../img/imagem fogo.jpg" alt="Fogo">
-                        <span class="overlay-text">Criação do fogo</span>
+                        <img src="../img/escrita cuneiforme.jpg" alt="Escrita Cuneiforme">
+                        <span class="overlay-text">Escrita Cuneiforme: Primeira forma de escrita criada na humanidade</span>
                     </div>
                     <div class="image-container">
                         <img src="../img/pinturas rupestres.jpg" alt="Pinturas Rupestres">
