@@ -21,11 +21,11 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="index.php">Home</a>
+                <li class="nav-item">
+                        <a class="nav-link text-white" href="index.php">Página Inicial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="sobre.php">Sobre</a>
+                        <a class="nav-link text-white" href="glossario.php">Glossario</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="contato.php">Contato</a>
