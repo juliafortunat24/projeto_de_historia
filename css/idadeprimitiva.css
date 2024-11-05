@@ -102,3 +102,116 @@ footer {
     bottom: 0;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2); /* Sombra superior para o rodapé */
 }
+.cards-section2 {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Largura ajustada */
+    height: 200px; /* Altura ajustada */
+}
+
+.image-container img {
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+    height: 100%; /* A imagem ocupa 100% da altura do contêiner */
+    object-fit: cover; /* Ajuste para cobrir o contêiner sem distorção */
+    border-radius: 8px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px; /* Aumenta o tamanho do texto, se desejado */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
+
+
+.img_primi{
+    border-radius: 6px;
+    margin-top: 7px;
+}
+
+.info-container a{
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .info-container {
+        padding: 10px 0;
+    }
+
+    .cards-section {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-section iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .overlay-text {
+        font-size: 12px;
+        padding: 5px;
+    }
+}

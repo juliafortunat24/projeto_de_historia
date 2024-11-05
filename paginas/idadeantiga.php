@@ -67,6 +67,7 @@
             <div class="info-container">
                 <h2>O que é a Idade Antiga?</h2>
                 <p>A Idade Antiga, que vai aproximadamente de 4.000 a.C. até 476 d.C., é marcada pelo surgimento das primeiras civilizações e pelo desenvolvimento das primeiras grandes culturas organizadas. Podemos dividi-la em algumas fases e regiões importantes, com inovações e características distintas.</p>
+                <a href="../img/Mapa Idade Antiga.jpg">Acesse aqui um mapa mental sobre a Idade Antiga</a>
                 
             </div>
         </section>
@@ -117,11 +118,34 @@
                 </ul>
             </div> 
         </section> 
+
+        <section class="cards-section2">
+            <div class="card">
+                <center>
+                    <h2>Imagens da Idade Primitiva</h2>
+                </center>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="../img/imagem fogo.jpg" alt="Fogo">
+                        <span class="overlay-text">Criação do fogo</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/pinturas rupestres.jpg" alt="Pinturas Rupestres">
+                        <span class="overlay-text">Pinturas realizadas nas paredes das cavernas para representar o cotidiano deles</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/ferramentas primitivas.jpg" alt="Ferramentas Primitivas">
+                        <span class="overlay-text">Ferramentas utilizadas para caça e pesca</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         
 
         <!-- Seção da Videoaula -->
         <section class="video-section">
-            <h2>Videoaula sobre a Idade Primitiva</h2>
+            <h2>Videoaula sobre a Idade Antiga</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Hko3IGt-VzA?si=L52gM9Ynef8oqkhm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>

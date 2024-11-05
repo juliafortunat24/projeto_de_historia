@@ -21,7 +21,7 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
-                <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="index.php">Página Inicial</a>
                     </li>
                     <li class="nav-item">
@@ -59,7 +59,6 @@
     </header>
 
     <div class="container">
-        <!-- Seção da Imagem e Informações -->
         <section class="intro-section">
             <div class="image-container">
                 <img src="../img/img idade primitiva.jpg" alt="Imagem representativa da Idade Primitiva">
@@ -70,10 +69,10 @@
                     sociedades e a evolução tecnológica. Ela corresponde ao intervalo que vai desde o surgimento do
                     homem,
                     há cerca de 2,5 milhões de anos, até a invenção da escrita, por volta de 3.500 a.C.</p>
+                <a href="../img/Mapa Mental Períodos da Pré-História.jpg">Acesse aqui um mapa mental sobre a Idade Primitiva</a>
             </div>
         </section>
 
-        <!-- Cards para informações adicionais -->
         <section class="cards-section">
             <div class="card">
                 <h2>Períodos da Idade Primitiva</h2>
@@ -89,6 +88,9 @@
                         de ferramentas mais sofisticadas e a introdução da agricultura, possibilitando a sedentarização
                         das
                         primeiras civilizações.</li>
+
+                    <li><strong>Idade dos Metais:</strong> foi dividida em três etapas: Idade do Cobre, Idade do Bronze e Idade do Ferro. Nesse período, houve avanços significativos na fabricação de ferramentas, armas e utensílios, além do desenvolvimento de trocas comerciais. 
+                    </li>
                 </ul>
             </div>
 
@@ -114,13 +116,42 @@
                     na cooperação para caça, pesca e coleta de alimentos. A cultura era transmitida oralmente e, no
                     final
                     desse período, surgiram as primeiras manifestações artísticas, como as pinturas rupestres.</p>
+                <img class="img_primi" src="../img/img primitiva card.jpg" alt="" width="90%" height="40%">
             </div>
+        </section>
+
+        <section class="cards-section2">
+            <div class="card">
+                <center>
+                    <h2>Imagens da Idade Primitiva</h2>
+                </center>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="../img/imagem fogo.jpg" alt="Fogo">
+                        <span class="overlay-text">Criação do fogo</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/pinturas rupestres.jpg" alt="Pinturas Rupestres">
+                        <span class="overlay-text">Pinturas realizadas nas paredes das cavernas para representar o cotidiano deles</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/ferramentas primitivas.jpg" alt="Ferramentas Primitivas">
+                        <span class="overlay-text">Ferramentas utilizadas para caça e pesca</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Seção da Videoaula -->
         <section class="video-section">
             <h2>Videoaula sobre a Idade Primitiva</h2>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=vxPRnJ-Gv6Bqb7lh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section class="video-section">
+            <h2>Videoaula sobre a Idade dos Metais</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eSET8IkMQ2k?si=S8oUfY9YPoyxEyrB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>
 </body>
