@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="idadeprimitiva.css">
+    <link rel="stylesheet" href="../css/idadeprimitiva.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -62,7 +62,7 @@
         <!-- Seção da Imagem e Informações -->
         <section class="intro-section">
             <div class="image-container">
-                <img src="./img/img idade moderna.jpg" alt="Imagem representativa da Idade Primitiva">
+                <img src="../img/img idade moderna.jpg" alt="Imagem representativa da Idade Primitiva">
             </div>
             <div class="info-container">
                 <h2>O que é a Idade Moderna?</h2>

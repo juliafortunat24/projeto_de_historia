@@ -13,11 +13,11 @@
       <img src="../img/logo2_semfundo.png" alt="">
     </div>
     <div class="container">
-      <a class="period-box idade-primitiva" href="../idadeprimitiva.php"><span>Idade Primitiva</span></a>
-      <a class="period-box idade-antiga" href="../idadeantiga.php"><span>Idade Antiga</span></a>
-      <a class="period-box idade-media" href="../idademedia.php"><span>Idade Média</span></a>
-      <a class="period-box idade-moderna" href="../idademoderna.php"><span>Idade Moderna</span></a>
-      <a class="period-box idade-contemporanea" href="../idadecontemporanea.php"><span>Idade Contemporânea</span></a>
+      <a class="period-box idade-primitiva" href="idadeprimitiva.php"><span>Idade Primitiva</span></a>
+      <a class="period-box idade-antiga" href="idadeantiga.php"><span>Idade Antiga</span></a>
+      <a class="period-box idade-media" href="idademedia.php"><span>Idade Média</span></a>
+      <a class="period-box idade-moderna" href="idademoderna.php"><span>Idade Moderna</span></a>
+      <a class="period-box idade-contemporanea" href="idadecontemporanea.php"><span>Idade Contemporânea</span></a>
     </div>
   </body>
 </html>
