@@ -1,7 +1,8 @@
 <?php
+session_start();
 include '../bd/database.php';
 
-// Verifica se a requisição é para inserir uma nova entrada
+// Verifica se a requisição é para inserir, editar ou excluir uma entrada
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
     if ($_POST['action'] == 'add') {
         $titulo = $_POST['term'];
@@ -33,8 +34,53 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
     }
 }
 
+// Consulta os termos do glossário
 $sql = "SELECT * FROM glossario";
 $result = $connection->query($sql);
+
+
+$menuPrincipal = '
+    <li class="nav-item">
+        <a class="nav-link text-white" href="glossario.php">Glossário</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idadeantiga.php">Idade Antiga</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idadecontemporanea.php">Idade Contemporânea</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idademedia.php">Idade Média</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idademoderna.php">Idade Moderna</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
+    </li>
+';
+
+$menuUsuarioEspecifico = '';
+
+if (isset($_SESSION['tipo_sessao'])) {
+    if ($_SESSION['tipo_sessao'] === 'administrador') {
+        $menuUsuarioEspecifico .= '
+            <li class="nav-item">
+                <a class="nav-link text-white" href="administrador.php">Página do Administrador</a>
+            </li>
+        ';
+    } elseif ($_SESSION['tipo_sessao'] === 'aluno') {
+        $menuUsuarioEspecifico .= '
+            <li class="nav-item">
+                <a class="nav-link text-white" href="aluno.php">Página do Aluno</a>
+            </li>
+        ';
+    }
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +91,45 @@ $result = $connection->query($sql);
     <title>Glossário</title>
     <link rel="stylesheet" href="../css/glossario.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
+<div class="pos-f-t">
+        <div class="offcanvas offcanvas-start bg-dark text-white custom-offcanvas" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <!-- Primeira parte: itens específicos de cada tipo de usuário -->
+                    <?php echo $menuUsuarioEspecifico; ?>
+                    <!-- Segunda parte: itens visíveis para todos -->
+                    <?php echo $menuPrincipal; ?>
+                </ul>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+
+    <style>
+        #offcanvasNavbar {
+            width: 250px;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
     <header>
         <h1 class="text-center my-4">Glossário</h1>
     </header>

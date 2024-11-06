@@ -1,6 +1,53 @@
+<?php
+session_start();
+
+// Lógica para preparar itens do menu
+$menuPrincipal = '
+    <li class="nav-item">
+        <a class="nav-link text-white" href="glossario.php">Glossário</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idadeantiga.php">Idade Antiga</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idadecontemporanea.php">Idade Contemporânea</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idademedia.php">Idade Média</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idademoderna.php">Idade Moderna</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
+    </li>
+';
+
+$menuUsuarioEspecifico = '';
+
+if (isset($_SESSION['tipo_sessao'])) {
+    if ($_SESSION['tipo_sessao'] === 'administrador') {
+        $menuUsuarioEspecifico .= '
+            <li class="nav-item">
+                <a class="nav-link text-white" href="administrador.php">Página do Administrador</a>
+            </li>
+        ';
+    } elseif ($_SESSION['tipo_sessao'] === 'aluno') {
+        $menuUsuarioEspecifico .= '
+            <li class="nav-item">
+                <a class="nav-link text-white" href="aluno.php">Página do Aluno</a>
+            </li>
+        ';
+    }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +55,28 @@
     <link rel="stylesheet" href="../css/idadeprimitiva.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
     <div class="pos-f-t">
-
         <div class="offcanvas offcanvas-start bg-dark text-white custom-offcanvas" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
+             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                        aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
-                <li class="nav-item">
-                        <a class="nav-link text-white" href="index.php">Página Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="glossario.php">Glossario</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="contato.php">Contato</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="servicos.php">Serviços</a>
-                    </li>
+                    <!-- Primeira parte: itens específicos de cada tipo de usuário -->
+                    <?php echo $menuUsuarioEspecifico; ?>
+                    <!-- Segunda parte: itens visíveis para todos -->
+                    <?php echo $menuPrincipal; ?>
                 </ul>
             </div>
         </div>
 
         <nav class="navbar navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Alterna navegação">
+                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
