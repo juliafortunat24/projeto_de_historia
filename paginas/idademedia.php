@@ -52,7 +52,7 @@ if (isset($_SESSION['tipo_sessao'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/idadeprimitiva.css">
+    <link rel="stylesheet" href="../css/idademedia.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -99,11 +99,12 @@ if (isset($_SESSION['tipo_sessao'])) {
         <!-- Seção da Imagem e Informações -->
         <section class="intro-section">
             <div class="image-container">
-                <img src="../img/img idade media.jpg" alt="Imagem representativa da Idade Primitiva">
+                <img src="../img/img idade media.jpg" alt="Imagem representativa da Idade Media">
             </div>
             <div class="info-container">
                 <h2>O que é a Idade Média?</h2>
-                <p>A Idade Média é o período histórico que se estende de aproximadamente 476 d.C., com a queda do Império Romano, até 1453 d.C., com a tomada de Constantinopla. A Idade Média foi um período de transformação, marcado por um forte vínculo entre a religião e o cotidiano, pelo sistema feudal e pela estrutura social rígida. Ao mesmo tempo, surgiram invenções e práticas que impulsionaram a economia e a cultura, preparando a Europa para a Renascença que viria no final do período.
+                <p>A Idade Média é o período histórico que se estende de aproximadamente 476 d.C., com a queda do Império Romano, até 1453 d.C., com a tomada de Constantinopla. A Idade Média foi um período de transformação, marcado por um forte vínculo entre a religião e o cotidiano, pelo sistema feudal e pela estrutura social rígida. Ao mesmo tempo, surgiram invenções e práticas que impulsionaram a economia e a cultura, preparando a Europa para a Renascença que viria no final do período. </p>
+                <a href="./img/Mapa Mental idade media.jpg" target="_blank"><h5>Acesse aqui um mapa mental sobre a Idade Média</h5></a>
             </div>
         </section>
 
@@ -143,9 +144,32 @@ if (isset($_SESSION['tipo_sessao'])) {
             </div>
         </section>
 
+        <section class="cards-section2">
+            <div class="card">
+                <center>
+                    <h2>Imagens da Idade Média</h2>
+                </center>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="../img/imagem igreja catolica.jpg" alt="Igreja">
+                        <span class="overlay-text">Grande influência da Igreja Católica</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/feudos.jpg" alt="Feudos">
+                        <span class="overlay-text">Feudos</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/Cerimônia de vassalos.jpg" alt="Cerimônia dos vassalos">
+                        <span class="overlay-text">Cerimônia dos vassalos</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
         <!-- Seção da Videoaula -->
         <section class="video-section">
-            <h2>Videoaula sobre a Idade Primitiva</h2>
+            <h3>Videoaula sobre a Idade Média</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QjoHiK_luxw?si=2Xi-5eO9oRC0vvTr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 

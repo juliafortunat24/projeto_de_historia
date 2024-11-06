@@ -52,7 +52,7 @@ if (isset($_SESSION['tipo_sessao'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/idadeprimitiva.css">
+    <link rel="stylesheet" href="../css/idademoderna.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -104,6 +104,7 @@ if (isset($_SESSION['tipo_sessao'])) {
             <div class="info-container">
                 <h2>O que é a Idade Moderna?</h2>
                 <p>A Idade Moderna foi um período de grandes inovações culturais, científicas e econômicas. Foi um tempo em que o pensamento racional e a ciência ganharam força, questionando as tradições e promovendo ideias que moldaram a sociedade moderna.</p>
+                <a href="../img/IDADE MODERNA mapa.jpg" target="_blank"><h5>Acesse aqui um mapa mental sobre a Idade Moderna</h5></a>
             </div>
         </section>
 
@@ -134,6 +135,7 @@ if (isset($_SESSION['tipo_sessao'])) {
                     </li>
                     <li><strong>Teoria Heliocêntrica de Copérnico:</strong> Mudou a visão do universo, sendo posteriormente defendida por Galileu.
                     </li>
+                    <img class="img_primi" src="../img/imagem globo.jpg" alt="" width="90%" height="40%">
                 </ul>
             </div>
 
@@ -150,6 +152,29 @@ if (isset($_SESSION['tipo_sessao'])) {
                     </li>
                 </ul>
             </div>
+        </section>
+
+        <section class="cards-section2">
+            <div class="card">
+                <center>
+                    <h2>Imagens da Idade Primitiva</h2>
+                </center>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="../img/navegacoes.jpg" alt="navios">
+                        <span class="overlay-text">Grandes Navegações e Descobertas</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/monalisa.png" alt="Renascimento">
+                        <span class="overlay-text">Renascimento Artístico</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/escravidao idade moderna.jpg" alt="Escravidao">
+                        <span class="overlay-text">Escravidão e exploração</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Seção da Videoaula -->

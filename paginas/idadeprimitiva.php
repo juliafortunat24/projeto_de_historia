@@ -106,7 +106,7 @@ if (isset($_SESSION['tipo_sessao'])) {
                     sociedades e a evolução tecnológica. Ela corresponde ao intervalo que vai desde o surgimento do
                     homem,
                     há cerca de 2,5 milhões de anos, até a invenção da escrita, por volta de 3.500 a.C.</p>
-                <a href="../img/Mapa Mental Períodos da Pré-História.jpg">Acesse aqui um mapa mental sobre a Idade Primitiva</a>
+                <a href="../img/Mapa Mental Períodos da Pré-História.jpg" target ="_blank" ><h5>Acesse aqui um mapa mental sobre a Idade Primitiva</h5></a>
             </div>
         </section>
 
@@ -182,12 +182,12 @@ if (isset($_SESSION['tipo_sessao'])) {
 
         <!-- Seção da Videoaula -->
         <section class="video-section">
-            <h2>Videoaula sobre a Idade Primitiva</h2>
+            <h3>Videoaula sobre a Idade Primitiva</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/jcb6VrYNxYc?si=vxPRnJ-Gv6Bqb7lh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
         <section class="video-section">
-            <h2>Videoaula sobre a Idade dos Metais</h2>
+            <h3>Videoaula sobre a Idade dos Metais</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/eSET8IkMQ2k?si=S8oUfY9YPoyxEyrB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>

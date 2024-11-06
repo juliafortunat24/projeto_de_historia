@@ -52,7 +52,7 @@ if (isset($_SESSION['tipo_sessao'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/idadeprimitiva.css">
+    <link rel="stylesheet" href="../css/idadeantiga.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -105,7 +105,7 @@ if (isset($_SESSION['tipo_sessao'])) {
                 <p>A Idade Antiga, que vai aproximadamente de 4.000 a.C. até 476 d.C., é marcada pelo surgimento das
                     primeiras civilizações e pelo desenvolvimento das primeiras grandes culturas organizadas. Podemos
                     dividi-la em algumas fases e regiões importantes, com inovações e características distintas.</p>
-                <a href="../img/Mapa Idade Antiga.jpg">Acesse aqui um mapa mental sobre a Idade Antiga</a>
+                <a href="../img/Mapa Idade Antiga.jpg" target="_blank"><h5>Acesse aqui um mapa mental sobre a Idade Antiga</h5></a>
             </div>
         </section>
 
@@ -171,7 +171,7 @@ if (isset($_SESSION['tipo_sessao'])) {
         <section class="cards-section2">
             <div class="card">
                 <center>
-                    <h2>Imagens da Idade Primitiva</h2>
+                    <h2>Imagens da Idade Antiga</h2>
                 </center>
                 <div class="image-gallery">
                     <div class="image-container">
@@ -180,16 +180,19 @@ if (isset($_SESSION['tipo_sessao'])) {
                             humanidade</span>
                     </div>
                     <div class="image-container">
-                        <img src="../img/pinturas rupestres.jpg" alt="Pinturas Rupestres">
-                        <span class="overlay-text">Pinturas realizadas nas paredes das cavernas para representar o
-                            cotidiano deles</span>
+                        <img src="../img/img_antiga.jpg" alt="Pinturas Rupestres">
+                        <span class="overlay-text">Construção de templos e pirâmides</span>
                     </div>
                     <div class="image-container">
-                        <img src="../img/ferramentas primitivas.jpg" alt="Ferramentas Primitivas">
-                        <span class="overlay-text">Ferramentas utilizadas para caça e pesca</span>
+                        <img src="../img/img filosofia idade antiga.jpg" alt="Ferramentas Primitivas">
+                        <span class="overlay-text">Desenvolvimento do pensamento filosófico</span>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="video-section">
+            <h3>Videoaula sobre a Idade Antiga</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hko3IGt-VzA?si=U-Y6ruY1s3oay8QP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>
 </body>
