@@ -3,7 +3,7 @@ session_start();
 include '../bd/database.php';
 
 // Verifica se a requisição é para inserir, editar ou excluir uma entrada
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'administrador') {
     if ($_POST['action'] == 'add') {
         $titulo = $_POST['term'];
         $descricao = $_POST['definition'];
@@ -38,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action'])) {
 $sql = "SELECT * FROM glossario";
 $result = $connection->query($sql);
 
-
 $menuPrincipal = '
     <li class="nav-item">
         <a class="nav-link text-white" href="glossario.php">Glossário</a>
@@ -59,7 +58,7 @@ $menuPrincipal = '
         <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
     </li>
     <li class="nav-item">
-            <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
+        <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
     </li>
 ';
 
@@ -79,7 +78,6 @@ if (isset($_SESSION['tipo_sessao'])) {
             </li>
         ';
     }
-
 }
 ?>
 
@@ -91,50 +89,48 @@ if (isset($_SESSION['tipo_sessao'])) {
     <title>Glossário</title>
     <link rel="stylesheet" href="../css/glossario.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
 <div class="pos-f-t">
-        <div class="offcanvas offcanvas-start bg-dark text-white custom-offcanvas" tabindex="-1" id="offcanvasNavbar"
-             aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                    <!-- Primeira parte: itens específicos de cada tipo de usuário -->
-                    <?php echo $menuUsuarioEspecifico; ?>
-                    <!-- Segunda parte: itens visíveis para todos -->
-                    <?php echo $menuPrincipal; ?>
-                </ul>
-            </div>
+    <div class="offcanvas offcanvas-start bg-dark text-white custom-offcanvas" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Alterna navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <!-- Primeira parte: itens específicos de cada tipo de usuário -->
+                <?php echo $menuUsuarioEspecifico; ?>
+                <!-- Segunda parte: itens visíveis para todos -->
+                <?php echo $menuPrincipal; ?>
+            </ul>
+        </div>
     </div>
 
-    <style>
-        #offcanvasNavbar {
-            width: 250px;
-        }
-    </style>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+    #offcanvasNavbar {
+        width: 250px;
+    }
+</style>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+<header>
+    <h1 class="text-center my-4">Glossário</h1>
+</header>
 
-    <header>
-        <h1 class="text-center my-4">Glossário</h1>
-    </header>
-
-    <div class="container">
+<div class="container">
+    <!-- Verifica se o usuário é administrador para mostrar o formulário de adição -->
+    <?php if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'administrador'): ?>
         <div class="mb-4">
             <h2>Adicionar Nova Entrada</h2>
             <form method="post" action="">
@@ -150,35 +146,41 @@ if (isset($_SESSION['tipo_sessao'])) {
                 <button type="submit" class="btn btn-primary">Adicionar</button>
             </form>
         </div>
+    <?php endif; ?>
 
-        <section class="cards-section" id="glossaryCards">
-            <?php if ($result->num_rows > 0) {
-                while ($linha = $result->fetch_assoc()) {
-                    echo "<div class='card mb-3'>
-                            <div class='card-body'>
-                                <h5 class='card-title'>" . htmlspecialchars($linha['titulo']) . "</h5>
-                                <p class='card-text'>" . htmlspecialchars($linha['descricao']) . "</p>
-                                <form method='post' action='' class='d-inline'>
-                                    <input type='hidden' name='action' value='delete'>
-                                    <input type='hidden' name='id_palavra' value='" . $linha['id_palavra'] . "'>
-                                    <button type='submit' class='btn btn-danger'>Excluir</button>
-                                </form>
-                                <button class='btn btn-warning' onclick=\"fillEditForm(" . $linha['id_palavra'] . ", '" . addslashes($linha['titulo']) . "', '" . addslashes($linha['descricao']) . "')\">Editar</button>
-                            </div>
-                        </div>";
-                }
-            } ?>
-        </section>
-    </div>
+    <section class="cards-section" id="glossaryCards">
+        <?php if ($result->num_rows > 0): ?>
+            <?php while ($linha = $result->fetch_assoc()): ?>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= htmlspecialchars($linha['titulo']) ?></h5>
+                        <p class="card-text"><?= htmlspecialchars($linha['descricao']) ?></p>
+                        <!-- Verifica se o usuário é administrador para mostrar os botões de edição e exclusão -->
+                        <?php if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'administrador'): ?>
+                            <form method="post" action="" class="d-inline">
+                                <input type="hidden" name="action" value="delete">
+                                <input type="hidden" name="id_palavra" value="<?= $linha['id_palavra'] ?>">
+                                <button type="submit" class="btn btn-danger">Excluir</button>
+                            </form>
+                            <button class="btn btn-warning" onclick="fillEditForm(<?= $linha['id_palavra'] ?>, '<?= addslashes($linha['titulo']) ?>', '<?= addslashes($linha['descricao']) ?>')">Editar</button>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p class="text-center">Nenhuma entrada no glossário.</p>
+        <?php endif; ?>
+    </section>
+</div>
 
-    <script>
-        function fillEditForm(id, term, definition) {
-            document.getElementById('term').value = term;
-            document.getElementById('definition').value = definition;
-            const form = document.querySelector('form');
-            form.action = '';
-            form.innerHTML += `<input type="hidden" name="action" value="edit"><input type="hidden" name="id_palavra" value="${id}">`;
-        }
-    </script>
+<script>
+    function fillEditForm(id, term, definition) {
+        document.getElementById('term').value = term;
+        document.getElementById('definition').value = definition;
+        const form = document.querySelector('form');
+        form.action = '';
+        form.innerHTML += `<input type="hidden" name="action" value="edit"><input type="hidden" name="id_palavra" value="${id}">`;
+    }
+</script>
 </body>
 </html>
