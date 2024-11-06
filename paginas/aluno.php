@@ -19,5 +19,10 @@
       <a class="period-box idade-moderna" href="idademoderna.php"><span>Idade Moderna</span></a>
       <a class="period-box idade-contemporanea" href="idadecontemporanea.php"><span>Idade Contemporânea</span></a>
     </div>
+    <div id="logout">
+      <form action="../bd/logout.php">
+        <button type="submit">Sair</button>
+      </form>
+    </div>
   </body>
 </html>
