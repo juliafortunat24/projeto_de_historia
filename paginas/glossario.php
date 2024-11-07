@@ -47,11 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $sql = "SELECT * FROM glossario";
 if (!empty($searchTerm)) {
-    // Aqui ajustamos a busca para ser apenas pelo título
     $sql .= " WHERE titulo LIKE ?";
     $stmt = $connection->prepare($sql);
     $likeSearchTerm = '%' . $searchTerm . '%';
-    $stmt->bind_param('s', $likeSearchTerm); // Agora buscamos somente no título
+    $stmt->bind_param('s', $likeSearchTerm);
     $stmt->execute();
     $result = $stmt->get_result();
 } else {

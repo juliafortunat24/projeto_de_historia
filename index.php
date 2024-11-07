@@ -13,7 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $usuario_logado = mysqli_fetch_assoc($result);
 
         if (password_verify($senha, $usuario_logado['pass_usuario'])) {
-            // Cria a sessão do usuário
             $_SESSION['usuario_sessao'] = $usuario_logado['nome_usuario'];
             $_SESSION['tipo_sessao'] = $usuario_logado['tipo_usuario'];
             header('Location: ./paginas/pagina_inicial.php');

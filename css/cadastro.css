@@ -34,7 +34,8 @@ body {
     margin-bottom: 15px;
 }
 label {
-    display: block;
+    text-align: left;
+    display: flex;
     margin-top: 15px;
     color: #f7f3eb;
     font-weight: bold;

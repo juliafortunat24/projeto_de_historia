@@ -4,8 +4,6 @@ $user = 'root';
 $password = '';
 $database = 'projeto_historia';
 
-//criar conexão
-
 $connection = mysqli_connect($host, $user, $password, $database);
 
 if (!$connection) {
