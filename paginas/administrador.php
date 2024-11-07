@@ -19,5 +19,8 @@
       <a class="period-box idade-moderna" href="idademoderna.php"><span>Idade Moderna</span></a>
       <a class="period-box idade-contemporanea" href="idadecontemporanea.php"><span>Idade Contemporânea</span></a>
     </div>
+    <div id="logout">
+      <button type="submit">Sair</button>
+    </div>
   </body>
 </html>
