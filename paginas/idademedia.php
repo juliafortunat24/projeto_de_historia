@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Lógica para preparar itens do menu
 $menuPrincipal = '
     <li class="nav-item">
         <a class="nav-link text-white" href="glossario.php">Glossário</a>
@@ -67,9 +66,9 @@ if (isset($_SESSION['tipo_sessao'])) {
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav">
-                    <!-- Primeira parte: itens específicos de cada tipo de usuário -->
+                   
                     <?php echo $menuUsuarioEspecifico; ?>
-                    <!-- Segunda parte: itens visíveis para todos -->
+                
                     <?php echo $menuPrincipal; ?>
                 </ul>
             </div>
@@ -97,7 +96,6 @@ if (isset($_SESSION['tipo_sessao'])) {
     </header>
 
     <div class="container">
-        <!-- Seção da Imagem e Informações -->
         <section class="intro-section">
             <div class="image-container">
                 <img src="../img/img idade media.jpg" alt="Imagem representativa da Idade Media">
@@ -109,7 +107,6 @@ if (isset($_SESSION['tipo_sessao'])) {
             </div>
         </section>
 
-        <!-- Cards para informações adicionais -->
         <section class="cards-section">
             <div class="card">
                 <h2>Períodos da Idade Média</h2>
@@ -168,7 +165,6 @@ if (isset($_SESSION['tipo_sessao'])) {
 
         </section>
 
-        <!-- Seção da Videoaula -->
         <section class="video-section">
             <h3>Videoaula sobre a Idade Média</h3>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QjoHiK_luxw?si=2Xi-5eO9oRC0vvTr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
