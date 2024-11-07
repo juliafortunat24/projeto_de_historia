@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
+    header("Location: ../index.php");
+    exit();
+}
+
 $menuPrincipal = '
     <li class="nav-item">
         <a class="nav-link text-white" href="glossario.php">Glossário</a>

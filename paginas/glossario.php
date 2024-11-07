@@ -2,6 +2,11 @@
 session_start();
 include '../bd/database.php'; 
 
+if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
+    header("Location: ../index.php");
+    exit();
+}
+
 $searchTerm = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
