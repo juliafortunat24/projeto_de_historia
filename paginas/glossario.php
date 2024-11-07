@@ -2,7 +2,7 @@
 session_start();
 include '../bd/database.php'; 
 
-if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
+if ($_SESSION['usuario_sessao'] == "" && $_SESSION['tipo_sessao'] == "") {
     header("Location: ../index.php");
     exit();
 }
@@ -47,10 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $sql = "SELECT * FROM glossario";
 if (!empty($searchTerm)) {
-    $sql .= " WHERE titulo LIKE ? OR descricao LIKE ?";
+    // Aqui ajustamos a busca para ser apenas pelo título
+    $sql .= " WHERE titulo LIKE ?";
     $stmt = $connection->prepare($sql);
     $likeSearchTerm = '%' . $searchTerm . '%';
-    $stmt->bind_param('ss', $likeSearchTerm, $likeSearchTerm);
+    $stmt->bind_param('s', $likeSearchTerm); // Agora buscamos somente no título
     $stmt->execute();
     $result = $stmt->get_result();
 } else {
