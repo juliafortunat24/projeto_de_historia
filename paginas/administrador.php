@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-header("Cache-Control: no-cache, no-store, must-revalidate"); 
-header("Pragma: no-cache"); 
-header("Expires: 0"); 
-
-if (!isset($_SESSION['nome_usuario'])) {
+if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
     header("Location: ../index.php");
     exit();
 }
@@ -15,7 +11,7 @@ if (!isset($_SESSION['nome_usuario'])) {
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>DOCUMENTO</title>
+      <title>Administrador</title>
       <link rel="stylesheet" href="aluno.css">
       <link href="../css/aluno.css" rel="stylesheet">
       </head>
@@ -32,7 +28,9 @@ if (!isset($_SESSION['nome_usuario'])) {
       <a class="period-box idade-contemporanea" href="idadecontemporanea.php"><span>Idade Contemporânea</span></a>
     </div>
     <div id="logout">
-      <button type="submit">Sair</button>
+      <form action="../bd/logout.php">
+        <button type="submit">Sair</button>
+      </form>
     </div>
   </body>
 </html>

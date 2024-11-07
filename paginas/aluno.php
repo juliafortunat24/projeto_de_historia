@@ -1,11 +1,7 @@
 <?php
 session_start();
 
-header("Cache-Control: no-cache, no-store, must-revalidate"); 
-header("Pragma: no-cache"); 
-header("Expires: 0"); 
-
-if (!isset($_SESSION['nome_usuario'])) {
+if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
     header("Location: ../index.php");
     exit();
 }
