@@ -209,12 +209,12 @@ if (isset($_SESSION['tipo_sessao'])) {
                 </div>
                 <div class="footer-column">
                     <h4>Integrantes</h4>
-                    <ul>
-                        <li><a href="https://www.instagram.com/cibelyy.santos/">Cibely Santos</a></li>
-                        <li><a href="https://www.linkedin.com/in/gabriel-gon%C3%A7alves-3b75a92b7/">Gabriel Moreira</a></li>
-                        <li><a href="https://www.instagram.com/_jufortunatos/">Julia Fortunato</a></li>
-                        <li><a href="https://www.instagram.com/luizsantana07_/">Luiz Gustavo Santana</a></li>
-                    </ul>
+                        <ul>
+                            <li><a href="https://www.instagram.com/cibelyy.santos/" target="_blank">Cibely Santos</a></li>
+                            <li><a href="https://www.linkedin.com/in/gabriel-gon%C3%A7alves-3b75a92b7/" target="_blank">Gabriel Moreira</a></li>
+                            <li><a href="https://www.instagram.com/_jufortunatos/" target="_blank">Julia Fortunato</a></li>
+                            <li><a href="https://www.instagram.com/luizsantana07_/" target="_blank">Luiz Gustavo Santana</a></li>
+                        </ul>
                 </div>
             </div>
         </div>
