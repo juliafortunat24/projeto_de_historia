@@ -11,10 +11,10 @@ $menuPrincipal = '
         <a class="nav-link text-white" href="glossario.php">Glossário</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" href="idadeantiga.php">Idade Antiga</a>
+        <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" href="idadecontemporanea.php">Idade Contemporânea</a>
+        <a class="nav-link text-white" href="idadeantiga.php">Idade Antiga</a>
     </li>
     <li class="nav-item">
         <a class="nav-link text-white" href="idademedia.php">Idade Média</a>
@@ -23,10 +23,11 @@ $menuPrincipal = '
         <a class="nav-link text-white" href="idademoderna.php">Idade Moderna</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
+        <a class="nav-link text-white" href="idadecontemporanea.php">Idade Contemporânea</a>
     </li>
+    
     <li class="nav-item">
-            <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
+        <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
     </li>
 ';
 
