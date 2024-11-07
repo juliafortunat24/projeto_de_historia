@@ -52,7 +52,7 @@ if (isset($_SESSION['tipo_sessao'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/idadeprimitiva.css">
+    <link rel="stylesheet" href="../css/idadecontemporanea.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -104,6 +104,7 @@ if (isset($_SESSION['tipo_sessao'])) {
             <div class="info-container">
                 <h2>O que é a Idade Contemporânea?</h2>
                 <p>A Idade Contemporânea é o período histórico que começa em 1789, com a Revolução Francesa, e continua até os dias de hoje. Este período é marcado por transformações profundas na política, economia, ciência e cultura, impulsionadas pelas revoluções industriais e pelo avanço das ideias democráticas e dos direitos humanos.</p>
+                <a href="../img/mapa idade contemporanea.jpg" target="_blank"><h5>Acesse aqui um mapa mental sobre a Idade Contemporânea</h5></a>
             </div>
         </section>
 
@@ -153,6 +154,30 @@ if (isset($_SESSION['tipo_sessao'])) {
                 </ul>
             </div>
         </section>
+
+        <section class="cards-section2">
+            <div class="card">
+                <center>
+                    <h2>Imagens da Idade Contemporânea</h2>
+                </center>
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="../img/revolução industrial.jpg" alt="Maquina a vapor">
+                        <span class="overlay-text"> Maquina a Vapor (Revolução Industrial)</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/imagem ONU.jpg" alt="Assembleia da ONU">
+                        <span class="overlay-text">Surgimento da Organização das Nações Unidas</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="../img/globalização.jpg" alt="Globalização">
+                        <span class="overlay-text">Globalização e Multiculturalismo</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
 
         <!-- Seção da Videoaula -->
         <section class="video-section">
