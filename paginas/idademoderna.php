@@ -187,6 +187,35 @@ if (isset($_SESSION['tipo_sessao'])) {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/U2PaNszvdXU?si=LRcm31j-1OOBJOym" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="https://www.sp.senai.br/unidade/taubate/">https://www.sp.senai.br/unidade/taubate/</a></li>
+                        <li><a href="tel:+551236095701">+55 (12) 3609-5701</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Endereço</h4>
+                    <ul>
+                        <li>SENAI Félix Guisard</li>
+                        <li>Av. Independência, 846 - Independência,<br> Taubaté - SP, 12031-001</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Integrantes</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/cibelyy.santos/">Cibely Santos</a></li>
+                        <li><a href="https://www.linkedin.com/in/gabriel-gon%C3%A7alves-3b75a92b7/">Gabriel Moreira</a></li>
+                        <li><a href="https://www.instagram.com/_jufortunatos/">Julia Fortunato</a></li>
+                        <li><a href="https://www.instagram.com/luizsantana07_/">Luiz Gustavo Santana</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
