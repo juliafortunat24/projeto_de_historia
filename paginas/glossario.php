@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../bd/database.php'; 
+include '../bd/database.php';
 
 if ($_SESSION['usuario_sessao'] == "" && $_SESSION['tipo_sessao'] == "") {
     header("Location: ../index.php");
@@ -11,7 +11,7 @@ $searchTerm = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['action']) && isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'administrador') {
-
+        
         if ($_POST['action'] == 'add') {
             $titulo = $_POST['term'];
             $descricao = $_POST['definition'];
@@ -47,11 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $sql = "SELECT * FROM glossario";
 if (!empty($searchTerm)) {
-    // Aqui ajustamos a busca para ser apenas pelo título
     $sql .= " WHERE titulo LIKE ?";
     $stmt = $connection->prepare($sql);
     $likeSearchTerm = '%' . $searchTerm . '%';
-    $stmt->bind_param('s', $likeSearchTerm); // Agora buscamos somente no título
+    $stmt->bind_param('s', $likeSearchTerm);
     $stmt->execute();
     $result = $stmt->get_result();
 } else {
@@ -59,15 +58,20 @@ if (!empty($searchTerm)) {
     $result = $connection->query($sql);
 }
 
+function destacarTermo($texto, $termo) {
+    if (empty($termo)) return $texto;
+    return preg_replace("/(" . preg_quote($termo, '/') . ")/i", '<strong class>$1</strong>', $texto);
+}
+
 $menuPrincipal = '
     <li class="nav-item">
         <a class="nav-link text-white" href="glossario.php">Glossário</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" href="idadeantiga.php">Idade Antiga</a>
+        <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" href="idadecontemporanea.php">Idade Contemporânea</a>
+        <a class="nav-link text-white" href="idadeantiga.php">Idade Antiga</a>
     </li>
     <li class="nav-item">
         <a class="nav-link text-white" href="idademedia.php">Idade Média</a>
@@ -76,8 +80,9 @@ $menuPrincipal = '
         <a class="nav-link text-white" href="idademoderna.php">Idade Moderna</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link text-white" href="idadeprimitiva.php">Idade Primitiva</a>
+        <a class="nav-link text-white" href="idadecontemporanea.php">Idade Contemporânea</a>
     </li>
+    
     <li class="nav-item">
         <a class="nav-link text-white" href="../bd/logout.php">Sair</a>
     </li>
@@ -160,9 +165,10 @@ if (isset($_SESSION['tipo_sessao'])) {
 
     <?php if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'administrador'): ?>
         <div class="mb-4">
-            <h2>Adicionar Nova Palavra</h2>
-            <form method="post" action="">
-                <input type="hidden" name="action" value="add">
+            <h2 id="formHeader">Adicionar Nova Palavra</h2>
+            <form method="post" action="" id="glossarioForm">
+                <input type="hidden" name="action" value="add" id="actionField">
+                <input type="hidden" name="id_palavra" value="" id="idField">
                 <div class="mb-3">
                     <label for="term" class="form-label">Palavra:</label>
                     <input type="text" class="form-control" name="term" id="term" required>
@@ -171,7 +177,7 @@ if (isset($_SESSION['tipo_sessao'])) {
                     <label for="definition" class="form-label">Definição</label>
                     <textarea class="form-control" name="definition" id="definition" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn_add">Adicionar</button>
+                <button type="submit" class="btn_add" id="submitButton">Adicionar</button>
             </form>
         </div>
     <?php endif; ?>
@@ -181,8 +187,8 @@ if (isset($_SESSION['tipo_sessao'])) {
             <?php while ($linha = $result->fetch_assoc()): ?>
                 <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title"><?= htmlspecialchars($linha['titulo']) ?></h5>
-                        <p class="card-text"><?= htmlspecialchars($linha['descricao']) ?></p>
+                        <h5 class="card-title"><?= destacarTermo(htmlspecialchars($linha['titulo']), $searchTerm) ?></h5>
+                        <p class="card-text"><?= destacarTermo(htmlspecialchars($linha['descricao']), $searchTerm) ?></p>
                     
                         <?php if (isset($_SESSION['tipo_sessao']) && $_SESSION['tipo_sessao'] === 'administrador'): ?>
                             <form method="post" action="" class="d-inline">
@@ -203,11 +209,12 @@ if (isset($_SESSION['tipo_sessao'])) {
 
 <script>
 function fillEditForm(id, term, definition) {
+    document.getElementById('formHeader').innerText = "Editar Palavra";
     document.getElementById('term').value = term;
     document.getElementById('definition').value = definition;
-    const form = document.querySelector('form');
-    form.action = '';
-    form.innerHTML += `<input type="hidden" name="action" value="edit"><input type="hidden" name="id_palavra" value="${id}">`;
+    document.getElementById('idField').value = id;
+    document.getElementById('actionField').value = 'edit';
+    document.getElementById('submitButton').innerText = "Salvar Alterações";
 }
 </script>
 
