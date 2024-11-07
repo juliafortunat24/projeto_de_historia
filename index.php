@@ -40,6 +40,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
             <input name="senha" type="password" required>
 
             <button type="submit">Enviar</button>
+
+            <a id="cadastro" href="./paginas/cadastro.php">Cadastre-se</a>
         </form>
     </div>
 </body>
