@@ -1,12 +1,15 @@
 <?php
-session_start(); 
+session_start();
+
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 if (!isset($_SESSION['nome_usuario'])) {
     header("Location: ../index.php");
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
