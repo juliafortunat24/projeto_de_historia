@@ -4,16 +4,14 @@ session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = $_POST['nome'];
-    $senha = $_POST['senha'];  // Recebe a senha sem aplicar md5, pois a senha já estará sendo validada de maneira segura
+    $senha = $_POST['senha']; 
 
-    // Consulta o banco de dados para verificar o usuário
     $query = "SELECT * FROM usuarios WHERE nome_usuario = '$nome'";
     $result = mysqli_query($connection, $query);
 
     if ($result->num_rows > 0) {
         $usuario_logado = mysqli_fetch_assoc($result);
 
-        // Verifica se a senha informada corresponde ao hash armazenado
         if (password_verify($senha, $usuario_logado['pass_usuario'])) {
             // Cria a sessão do usuário
             $_SESSION['usuario_sessao'] = $usuario_logado['nome_usuario'];

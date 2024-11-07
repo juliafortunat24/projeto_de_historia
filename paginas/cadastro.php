@@ -30,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $conn->close();
     
-    // Redireciona para a mesma página para exibir o alerta
     header("Location: " . $_SERVER['PHP_SELF']);
     exit();
 }
