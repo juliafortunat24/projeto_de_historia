@@ -11,7 +11,8 @@ if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>DOCUMENTO</title>
+      <title>Pagína Inicial</title>
+      <link rel="icon" href="../img/img_para_colocar_no_title-removebg-preview.png" type="image/x-icon">
       <link rel="stylesheet" href="aluno.css">
       <link href="../css/aluno.css" rel="stylesheet">
       </head>
