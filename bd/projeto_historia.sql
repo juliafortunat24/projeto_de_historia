@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Nov-2024 às 12:55
+-- Tempo de geração: 07-Nov-2024 às 15:47
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -44,7 +44,6 @@ INSERT INTO `glossario` (`id_palavra`, `titulo`, `descricao`) VALUES
 (95, 'Aqueduto', 'Estrutura construída para transportar água de fontes até as cidades, uma inovação romana em engenharia.'),
 (96, 'Globalização', 'Processo de integração econômica, cultural e política entre países, intensificado após a Guerra Fria.'),
 (97, 'Mercantilismo', 'Sistema econômico predominante na Idade Moderna, baseado na acumulação de riquezas e exploração colonial.'),
-(98, 'Absolutismo', 'Sistema político onde os monarcas detêm poder absoluto, especialmente no século XVII e XVIII.'),
 (99, 'Iluminismo', 'Movimento intelectual que enfatizava a razão, liberdade e igualdade, influenciando mudanças políticas e sociais.'),
 (100, 'Heliocentrismo', 'Teoria que posiciona o Sol como centro do sistema solar, proposta por Nicolau Copérnico.'),
 (101, 'Renascimento', 'Movimento cultural que redescobriu a cultura greco-romana e destacou o humanismo e as artes no século XV e XVI.'),
@@ -102,8 +101,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nome_usuario`, `tipo_usuario`, `pass_usuario`) VALUES
-(1, 'Mariana', 'administrador', '827ccb0eea8a706c4c34a16891f84e7b'),
-(2, 'Julia', 'aluno', '827ccb0eea8a706c4c34a16891f84e7b');
+(3, 'Cibely', 'aluno', '$2y$10$/gx8hLhjuI3ee07BMUfpo.d9zyIc438zskl2ftx3IXBWX19ZBJKZC'),
+(4, 'Justin', 'aluno', '$2y$10$Fa.fYIgpjuBp1pt0bpKRoe11mF4lIBbroBKci2mdY6OGFaloFhSz.'),
+(5, 'Mariana', 'administrador', '$2y$10$CmrmPQ.YoFXO8/25FeVGheBTZIz5uQvYvhc8Y.mxFLjMefFbxqcvW'),
+(6, 'Julia', 'aluno', '$2y$10$hC8sNbx3/epAYo76RnRoMOKgQAfDdYFFLuHXBkAj07P4k1u.86zcW');
 
 --
 -- Índices para tabelas despejadas
@@ -129,13 +130,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `glossario`
 --
 ALTER TABLE `glossario`
-  MODIFY `id_palavra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id_palavra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
