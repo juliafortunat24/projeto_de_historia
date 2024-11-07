@@ -30,7 +30,7 @@ if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
     </div>
     <div id="logout">
       <form action="../bd/logout.php">
-        <button type="submit">Sair</button>
+        <button >Sair</button>
       </form>
     </div>
   </body>

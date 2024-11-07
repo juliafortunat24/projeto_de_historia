@@ -152,7 +152,7 @@ if (isset($_SESSION['tipo_sessao'])) {
         <form method="post" action="">
             <div class="input-group">
                 <input type="text" class="form-control" name="search" placeholder="Pesquisar no glossário..." value="<?= htmlspecialchars($searchTerm) ?>">
-                <button type="submit" class="btn btn-primary">Pesquisar</button>
+                <button type="submit" class="btn_pesq">Pesquisar</button>
             </div>
         </form>
     </div>
@@ -170,7 +170,7 @@ if (isset($_SESSION['tipo_sessao'])) {
                     <label for="definition" class="form-label">Definição</label>
                     <textarea class="form-control" name="definition" id="definition" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Adicionar</button>
+                <button type="submit" class="btn_add">Adicionar</button>
             </form>
         </div>
     <?php endif; ?>
@@ -187,9 +187,9 @@ if (isset($_SESSION['tipo_sessao'])) {
                             <form method="post" action="" class="d-inline">
                                 <input type="hidden" name="action" value="delete">
                                 <input type="hidden" name="id_palavra" value="<?= $linha['id_palavra'] ?>">
-                                <button type="submit" class="btn btn-danger">Excluir</button>
+                                <button type="submit" class="btn_excluir">Excluir</button>
                             </form>
-                            <button class="btn btn-warning" onclick="fillEditForm(<?= $linha['id_palavra'] ?>, '<?= addslashes($linha['titulo']) ?>', '<?= addslashes($linha['descricao']) ?>')">Editar</button>
+                            <button class="btn_editar" onclick="fillEditForm(<?= $linha['id_palavra'] ?>, '<?= addslashes($linha['titulo']) ?>', '<?= addslashes($linha['descricao']) ?>')">Editar</button>
                         <?php endif; ?>
                     </div>
                 </div>
