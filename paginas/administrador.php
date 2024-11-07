@@ -27,6 +27,7 @@ if ($_SESSION['usuario_sessao']=="" && $_SESSION['tipo_sessao']=="") {
       <a class="period-box idade-media" href="idademedia.php"><span>Idade Média</span></a>
       <a class="period-box idade-moderna" href="idademoderna.php"><span>Idade Moderna</span></a>
       <a class="period-box idade-contemporanea" href="idadecontemporanea.php"><span>Idade Contemporânea</span></a>
+      <a class="period-box glossario" href="glossario.php"><span>Glossário</span></a>
     </div>
     <div id="logout">
       <form action="../bd/logout.php">

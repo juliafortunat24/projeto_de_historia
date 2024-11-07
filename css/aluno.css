@@ -36,6 +36,10 @@ img {
 .period-box.idade-contemporanea {
     background-image: url('../img/img_contemporanea.jpg');
 }
+.period-box.glossario{
+    background-image: url('../img/img\ dicionario.jpg');
+}
+
 .period-box {
     display: flex;
     align-items: center;
@@ -107,7 +111,6 @@ img {
         max-width: 80%;
     }
 }
-
 button {
     background-color: #443535; 
     color: #ffffff; 
@@ -119,4 +122,3 @@ button {
     transition: background-color 0.3s; 
     margin-bottom: 20px;
 }
-
