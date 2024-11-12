@@ -37,6 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $connection->prepare($sql);
             $stmt->bind_param('ssi', $titulo, $descricao, $id_palavra);
             $stmt->execute();
+
+            // Define uma variável de sessão para indicar que a edição foi bem-sucedida
+            $_SESSION['edit_success'] = true;
+
             header("Location: glossario.php");
             exit();
         }
@@ -116,8 +120,25 @@ if (isset($_SESSION['tipo_sessao'])) {
     <link rel="icon" href="../img/img_para_colocar_no_title-removebg-preview.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/glossario.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 <body>
+<!-- SweetAlert2 Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+
+<!-- Verificação do sucesso da edição -->
+<?php if (isset($_SESSION['edit_success']) && $_SESSION['edit_success']): ?>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Card editado com sucesso!',
+            showConfirmButton: true
+        });
+    </script>
+    <?php unset($_SESSION['edit_success']); ?>
+<?php endif; ?>
+
 <div class="pos-f-t">
     <div class="offcanvas offcanvas-start bg-dark text-white custom-offcanvas" tabindex="-1" id="offcanvasNavbar"
          aria-labelledby="offcanvasNavbarLabel">
